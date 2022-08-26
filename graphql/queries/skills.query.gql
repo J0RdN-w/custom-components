@@ -1,0 +1,9 @@
+query skills {
+    skill(order_by: { id: asc }) {
+      id
+      stitle
+      sdetail
+      sdate
+      subskills
+    }
+  }

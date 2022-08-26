@@ -1,0 +1,7 @@
+mutation updateview($id: Int!, $views: Int!) {
+  updateview:update_project(where: {id: {_eq: $id}}, _set: {views: $views}){
+    returning{
+      views
+    }
+  }
+}

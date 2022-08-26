@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    /* auto-complete classes */
+    .a-root-class{
+        @apply relative py-1 pr-0.5 w-fit;
+    }
+    .a-menu-class{
+        @apply z-50 bg-secondary-8 rounded my-1 drop-shadow-md overflow-hidden;
+    }
+    .a-item-class{
+        @apply p-2 text-sm m-[0.2rem] rounded text-secondary-dark cursor-pointer hover:bg-primary-5 hover:font-medium;
+    }
+    .a-item-group-title-class{
+        @apply text-secondary-6 font-medium cursor-text hover:bg-transparent;
+    }
+    .a-item-empty-class{
+        @apply text-secondary-3 hover:bg-inherit cursor-text hover:font-normal;
+    }
+    .a-item-hover-class{
+        @apply bg-primary-5 font-medium;
+    }
+    .a-item-footer-class{
+        @apply text-xs font-medium text-secondary-6 border-t-[1px] border-primary-lite border-opacity-30;
+    }
+    .a-item-header-class{
+        @apply text-xs font-medium text-primary-3 text-center;
+    }
+    .a-input-class{
+        @apply placeholder:font-medium outline-none px-2 py-1.5 ring-1 ring-secondary hover:ring-primary focus:ring-primary rounded bg-transparent;
+    }
+
+
+    /* file upload classes */
+  .f-root-class {
+    @apply h-56 rounded-xl w-[32rem] border-2 border-dashed m-2 p-1;
+  }
+  .f-drop-zone-class {
+    @apply flex-1 flex flex-col min-w-full min-h-full cursor-zoom-in;
+  }
+  .f-draggable-class {
+    @apply min-w-full min-h-full flex-1 flex flex-col justify-between p-2.5 rounded-md;
+  }
+  .f-preview-class {
+    @apply relative flex flex-col justify-center min-w-full h-[14rem];
+  }
+  .f-hovered-class {
+    @apply bg-secondary-lite-2;
+  }
+  .f-button-class {
+    @apply text-sm mt-3 self-center flex items-center justify-center gap-x-4 max-w-fit text-secondary disabled:text-secondary-3 disabled:hover:text-secondary-3 hover:text-primary bg-transparent ring-2 ring-primary disabled:ring-secondary-3 min-w-[10rem] py-1.5 rounded-md font-bold cursor-pointer transition-all ease-in-out duration-300;
+  }
+  .f-scene-class {
+    @apply relative flex-1 w-full h-full  flex rounded-md items-center overflow-hidden;
+  }
+  .f-items-class {
+    @apply flex-1 min-w-full min-h-full flex items-center;
+  }
+
+
+   /* tabs class */
+   .t-root-class{
+        @apply p-2 min-w-full;
+    }
+    .t-nav-tab-class{
+        @apply border-b-2 border-primary-5 flex items-center gap-6 w-fit flex-wrap;
+    }
+    .t-tab-item-wrapper-class{
+        @apply flex items-center justify-center;
+    }
+    .t-content-class{
+        @apply mt-2;
+    }
+
+
+    /* carousel class */
+    .c-root-class{
+        @apply w-[32rem] min-h-full overflow-hidden flex items-center flex-col gap-1;
+    }
+    .c-overlay-class{
+        @apply bg-secondary-dark bg-opacity-90 z-50 fixed top-0 left-0 right-0 bottom-0 min-w-full min-h-screen overflow-hidden flex items-center flex-col gap-1 py-2;
+    }
+    .c-scene-class{
+        @apply relative flex-1 w-full h-full overflow-hidden flex items-center;
+    }
+    .c-items-class{
+        @apply flex-1 min-h-full flex items-center;
+    }
+
+
+    /* time picker class */
+    .time-picker-root-class{
+        @apply mt-1 relative;
+    }
+    .time-picker-box-class{
+        @apply z-50 absolute left-0 bg-secondary-8 bg-opacity-95 flex items-center p-4 rounded-md mt-0.5  drop-shadow-xl text-secondary-dark font-semibold tracking-widest;
+    }
+    .time-picker-separator-class{
+        @apply font-bold text-base;
+    }
+    .time-picker-footer-class{
+        @apply pl-4 flex items-center gap-4;
+    }
+    .time-picker-select-class{
+        @apply cursor-pointer bg-transparent text-base hover:text-primary-3 font-bold px-1 tracking-wider outline-none focus:outline-none appearance-none;
+    }
+    .time-picker-input-class{
+        @apply focus:outline-none hover:outline-none placeholder:text-sm placeholder:tracking-wider text-sm tracking-wider font-medium text-secondary placeholder:font-medium outline-none px-2 py-1.5 border-2 border-secondary-6 hover:border-primary focus:border-primary rounded-md bg-transparent;
+    }
+
+
+    /* slider root class */
+    .slider-root-class{
+        @apply py-1 min-w-[24rem];
+    }
+    .slider-track-class{
+        @apply bg-secondary-4 rounded-full min-w-full h-3 cursor-pointer flex items-center;
+    }
+    .slider-fill-class{
+        @apply bg-secondary rounded-l-full hover:bg-primary group-hover:bg-primary min-h-full cursor-pointer transition-colors ease-in-out duration-200;
+    }
+    .slider-thumb-wrapper-class{
+        @apply bg-secondary ring-2 ring-secondary-4 hover:bg-primary group-hover:bg-primary rounded-full -ml-1 h-[0.65rem] w-[0.65rem] flex items-center justify-center transition-colors ease-in-out duration-200;
+    }
+    .slider-thumb-class{
+        @apply h-3 w-3 rounded-full flex;
+    }
+
+
+    /* pagination classes */
+    .pagination-root-class{
+        @apply p-0.5 drop-shadow-md rounded min-w-fit m-1 flex items-center justify-between gap-3;
+    }
+    .pagination-list-class{
+        @apply min-h-full flex-1 flex items-center gap-2;
+    }
+    .pagination-link-class{
+        @apply px-2.5 p-0.5 flex items-center justify-center min-h-full text-secondary-5 font-semibold;
+    }
+    .pagination-link-current-class{
+        @apply text-secondary-8 bg-primary-3 rounded-md transition-all ease-in-out duration-200;
+    }
+    .pagination-link-disabled-class{
+        @apply text-secondary-4;
+    }
+    .pagination-simple-class{
+        @apply min-w-fit;
+    }
+    .pagination-info-class{
+        @apply text-secondary-5 font-semibold;
+    }
+    .pagination-ellipsis-class{
+        @apply font-bold text-secondary-6;
+    }
+    .pagination-mobile-class{
+        @apply flex-wrap;
+    }
+
+
+    /* date picker classes */
+    .date-picker-root-class{
+        @apply mt-1 relative;
+    }
+    .date-picker-box-class{
+        @apply z-50 absolute left-0 bg-secondary-8 flex flex-col items-center p-4 rounded-md mt-0.5 drop-shadow-xl;
+    }
+    .date-picker-input-class{
+        @apply focus:outline-none hover:outline-none placeholder:text-sm placeholder:tracking-wider text-sm tracking-wider font-medium text-secondary placeholder:font-medium outline-none px-2 py-1.5 border-2 border-secondary-6 hover:border-primary focus:border-primary rounded-md bg-transparent;
+    }
+    .date-picker-table-class{
+        @apply flex flex-col min-w-full mt-2;
+    }
+    .date-picker-table-header-class{
+        @apply flex items-center gap-2;
+    }
+    .date-picker-table-header-cell-class{
+        @apply w-8 py-1.5 my-0.5 flex text-sm font-semibold items-center justify-center text-secondary-3;
+    }
+    .date-picker-table-row-class{
+        @apply flex items-center gap-2;
+    }
+    .date-picker-table-cell-class{
+        @apply w-8 py-1.5 my-0.5 flex text-sm font-semibold items-center justify-center;
+    }
+    .date-picker-table-cell-selectable-class{
+        @apply text-secondary-dark-2 hover:bg-primary-3 hover:rounded-full;
+    }
+    .date-picker-table-cell-unselectable-class{
+        @apply text-secondary-3;
+    }
+    .date-picker-table-cell-today-class{
+        @apply bg-secondary text-secondary-8 rounded-full;
+    }
+    .date-picker-table-cell-withn-hovered-class{
+        @apply bg-primary-lite rounded-full transition-colors ease-in-out duration-150;
+    }
+    .date-picker-table-cell-first-hovered-class{
+        @apply bg-primary-3 rounded-full transition-colors ease-in-out duration-150;
+    }
+    .date-picker-table-cell-last-hovered-class{
+        @apply bg-primary-3 rounded-full transition-colors ease-in-out duration-150;
+    }
+    .date-picker-table-cell-first-selected-class{
+        @apply bg-primary-2 rounded-full transition-colors ease-in-out duration-150;
+    }
+    .date-picker-table-cell-last-selected-class{
+        @apply bg-primary-2 rounded-full transition-colors ease-in-out duration-150;
+    }
+    .date-picker-header-class{
+        @apply bg-transparent pt-1 pb-2;
+    }
+    .date-picker-list-class{
+        @apply flex gap-2 outline-none;
+    }
+    .date-picker-table-cell-event-class{
+        @apply relative;
+    }
+    .date-picker-table-events-indicator-class{
+        @apply absolute top-1 right-1 w-[0.3rem] h-[0.3rem] bg-primary-3 rounded-full;
+    }
+
+}

@@ -1,0 +1,10 @@
+query ($title: String!) {
+  data:project(where: {ptitle: {_iregex: $title,}}) {
+    id
+    ptitle
+    pdetail
+    plink
+    plink
+  }
+}
+

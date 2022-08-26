@@ -1,0 +1,10 @@
+mutation endorse($endorsement: Int!) {
+  endorse:update_maininfo(
+    _set: { endorsement: $endorsement }
+    where: { id: { _eq: 1 } }
+  ) {
+    returning {
+      endorsement
+    }
+  }
+}

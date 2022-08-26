@@ -1,0 +1,13 @@
+query maininfo {
+    maininfo {
+      id
+      firstname
+      lastname
+      username
+      avatar
+      endorsement
+      aboutme
+      recentactivity
+      location
+    }
+  }

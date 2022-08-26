@@ -1,0 +1,8 @@
+query experiences {
+    experience(order_by: { id: asc }) {
+      id
+      exptitle
+      exptype
+      expplace
+    }
+  }
